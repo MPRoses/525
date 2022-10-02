@@ -1,4 +1,104 @@
+/* color palette of this project:
+https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff 
+*/
 .App {
   text-align: center;
-  background-color: #121212;
+  width: 100vw; height: 100vh;
+  margin: 0; padding: 0;
+  overflow: hidden;
+  background-color: #E5E5E5;
+}
+
+.fade-out {
+  animation: fadeout 2s cubic-bezier(1,-0.05,.61,.86) forwards;
+  position: relative;
+  top: 0;
+}
+
+@keyframes fadeout {
+  0% {
+    top: 0%;
+  } 100% {
+    top: -100%;
+  }
+}
+
+.home{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: #F2F6F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  top: 0; left: 0;
+}
+.home:before{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: #E5E5E5;
+}
+.home:after{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  content: '';
+  background-color: #E5E5E5;
+}
+.animate-border{
+  border: 40px solid #14213D;
+  transition: border .5s .2s ease;
+}
+.home.divide:before{
+  transition: all .6s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  width: 0;
+}
+.home.divide:after{
+  transition: all .6s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  width: 0;
+}
+.text-wrap{
+    width: 100%;
+    position: relative;
+    top: 0;
+    max-width: 44rem;
+}
+h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Oswald';
+    color: #121212;
+    margin-bottom: 3rem;
+}
+p{
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.4;
+    font-family: 'Josefin Sans';
+}
+
+@media screen and (max-width:1024px){
+  html{
+    font-size: 92.5%;
+  }
+}
+@media screen and (max-width:640px){
+  html{
+    font-size: 86%;
+  }
+  p{
+    font-size: 1.1rem;
+  }
 }

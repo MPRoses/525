@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "velocity-react": "^1.4.3"
+  }
+}
