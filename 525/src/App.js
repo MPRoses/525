@@ -18,15 +18,55 @@ $('document').ready( function() {
     <div className="App">
 
         <Preloader />
-
-        <div className="home">
-            <div className="text-wrap">
-                <h1>No more<br></br>Boring websites.</h1>
-                <p>
-                Though, consumed with the hot fire of his purpose, Ahab in all his thoughts and actions ever had in view the ultimate capture of Moby Dick; though he seemed ready to sacrifice all mortal interests to that one passion; nevertheless it may have been that he was by nature and long habituation far too wedded to a fiery whaleman's ways, altogether to abandon the collateral prosecution of the voyage. Or at least if this were otherwise, there were not wanting other motives much more influential with him. It would be refining too much, perhaps, even considering his monomania, to hint that his vindictiveness towards the White Whale might have possibly extended itself in some degree to all sperm whales, and that the more monsters he slew by so much the more he multiplied the chances that each subsequently encountered whale would prove to be the hated one he hunted.
-                </p>
-                </div>
+    <div className="sections-container">
+        <div className="home section">
+          <div className="navbar">
+            <ul>
+              <li>
+                <a className="navbar-item navbar-item-active" href="#">HOME</a>
+                <div className="navbar-item-line"></div>
+              </li>
+              <li>
+                <a className="navbar-item" href="#work">WORK</a>
+                <div className="navbar-item-line"></div>
+              </li>
+              <li>
+                <a className="navbar-item" href="#about">ABOUT</a>
+                <div className="navbar-item-line"></div>
+              </li>
+              <li>
+                <a className="navbar-item" href="#contact">CONTACT</a>
+                <div className="navbar-item-line"></div>
+              </li>
+            </ul>
+          </div>
+          <div className="hero-left">
+          <div className="hero-left-text">
+            <span>I'm a</span>
+            <div className="hero-left-text-2-container">
+              <div className="wordAnimation" id="designer">
+                designer <img alt="designer" src="https://cdn-icons-png.flaticon.com/512/2219/2219569.png" style={{width: "60px"}}></img>
+              </div>
+              <div className="wordAnimation" id="coder">
+                coder <img alt="coder" src="https://cdn-icons-png.flaticon.com/512/6062/6062646.png" style={{width: "60px"}}></img>
+              </div>
+              <div className="wordAnimation" id="coolguy">
+                cool guy <img alt="coolguy" src="https://cdn-icons-png.flaticon.com/512/7626/7626827.png" style={{width: "60px"}}></img>
+              </div>
             </div>
+          </div>
+          </div>
+        </div>
+        <div className="about section" id="#">
+        <a>Lorem20dds
+          ad
+          sa
+          da
+
+
+        </a>
+        </div>
+      </div>
     </div>
   );
 

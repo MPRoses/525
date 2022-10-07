@@ -1,14 +1,14 @@
 /* color palette of this project:
 https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff 
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700;800;900&display=swap');
 .App {
   text-align: center;
-  width: 100vw; height: 100vh;
-  margin: 0; padding: 0;
+  width: 100vw; height: 140vh;
+  margin: 0; padding: 0;  
   overflow: hidden;
-  background-color: #E5E5E5;
 }
-
 .fade-out {
   animation: fadeout 2s cubic-bezier(1,-0.05,.61,.86) forwards;
   position: relative;
@@ -22,41 +22,55 @@ https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff
     top: -100%;
   }
 }
-
+*:hover {
+  cursor: default;  
+}
+.section {
+  position: relative;
+  height: 100vh;
+  width: 95vw;
+  top: 2.5vw; left: 2.5vw;
+  backdrop-filter: blur(3px) saturate(0%);
+  -webkit-backdrop-filter: blur(3px) saturate(0%);
+  background-color: rgba(0,0,0,0.90)
+}
 .home{
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
   position: relative;
-  background-color: #F2F6F2;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   position: absolute;
-  top: 0; left: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: rgba(10,10,10,0.95)
+
 }
-.home:before{
+.sections-container:before{
   position: absolute;
   width: 50%;
   height: 100%;
   z-index: 10;
-  top: 0;
+  top: -100%;
   left: 0;
   content: '';
-  background-color: #E5E5E5;
+  background-color: black;
 }
-.home:after{
+.sections-container:after{
   position: absolute;
   width: 50%;
   height: 100%;
   z-index: 10;
-  top: 0;
+  top: -100%;
   right: 0;
   content: '';
-  background-color: #E5E5E5;
+  background-color: black;
 }
-.animate-border{
-  border: 40px solid #14213D;
+.animaste-border{
+  border: 30px solid rgba(0,0,0,1);
+  opacity: 0.5;
   transition: border .5s .2s ease;
 }
 .home.divide:before{
@@ -77,18 +91,120 @@ h1{
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 700;
-    font-family: 'Oswald';
-    color: #121212;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    color: whitesmoke;
     margin-bottom: 3rem;
 }
 p{
     font-size: 1rem;
-    color: #000000;
+    color: gray;
     line-height: 1.4;
     font-family: 'Josefin Sans';
 }
+.navbar {
+  position: relative;
+  width: 100vw;
+  height: 50px;
+  top: -46%;
 
+}
+ul li {
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+  position: relative;
+  margin: 12px 6vw 12px 6vw;
+}
+li:hover {
+  cursor: default;  
+}
+.navbar-item {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  display: inline-block;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size:23px;
+  letter-spacing: 3px;
+  color: white;
+}
+.navbar-item:hover {
+  cursor: pointer;  
+}
+.navbar-item-line {
+  position: relative;
+  width: 0;
+  height: 5px;
+  top: -20px;
+  background-color: black;
+  transition: all 0.32s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.navbar-item-line:hover {
+  width: 100%;
+  cursor: pointer;
+}
+.navbar-item:hover + .navbar-item-line {
+  width: 100%;
+}
+.navbar-item-active + .navbar-item-line {
+  width: 100%;
+}
+.hero-left {
+  width: 60%;
+  height: 40vh;
+  position: absolute;
+  left: 10%;
+  top: 22.5vh;
+}
+.hero-left-text {
+  font-size: 140px;
+  font-family: 'Heebo';
+  font-weight: 700;
+  text-align: left;
+  height: 30px;
+  user-select: none;
+}
+.hero-left-text span {
+ position: relative;
+ color: gray;
+ top: 60px;
+}
+.hero-left-text-2-container {
+  position: relative;
+  height: 20vh;
+  overflow: hidden;
+}
+.wordAnimation {
+  position: relative;
+  animation: wordAnimation 16s infinite;
+  animation-delay: 4s;
+  color: white;
+}
+.about {
+  position: relative;
+  height: 40vh;
+  background-color: gray;
+}
+@keyframes wordAnimation {
+  0% {
+    top: 0%;
+  } 26.67% {
+    top: 0%;
+  } 33.34% {
+    top: -110%;
+  } 60.01% {
+    top: -110%;
+  } 66.68% {
+    top: -220%;
+  } 93.35% {
+    top: -220%;
+  } 100% {
+    top: 0%;
+  }
+}
 @media screen and (max-width:1024px){
   html{
     font-size: 92.5%;
