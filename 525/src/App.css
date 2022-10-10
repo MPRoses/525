@@ -3,11 +3,15 @@ https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700;800;900&display=swap');
+
 .App {
   text-align: center;
   width: 100vw; height: 140vh;
   margin: 0; padding: 0;  
   overflow: hidden;
+}
+.App:hover {
+  cursor: none;
 }
 .fade-out {
   animation: fadeout 2s cubic-bezier(1,-0.05,.61,.86) forwards;
@@ -23,7 +27,7 @@ https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff
   }
 }
 *:hover {
-  cursor: default;  
+  cursor: pointer;  
 }
 .section {
   position: relative;
@@ -48,26 +52,31 @@ https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff
   background-color: rgba(10,10,10,0.95)
 
 }
-.sections-container:before{
+.home:before{
   position: absolute;
   width: 50%;
   height: 100%;
   z-index: 10;
-  top: -100%;
+  top: 0%;
   left: 0;
   content: '';
   background-color: black;
 }
-.sections-container:after{
+.home:after{
   position: absolute;
   width: 50%;
   height: 100%;
   z-index: 10;
-  top: -100%;
+  top: 0%;
   right: 0;
   content: '';
   background-color: black;
 }
+.animatdae-border{
+  border: 40px solid #EDEBE6;
+  transition: border .5s .2s ease;
+}
+
 .animaste-border{
   border: 30px solid rgba(0,0,0,1);
   opacity: 0.5;
@@ -169,9 +178,10 @@ li:hover {
 }
 .hero-left-text span {
  position: relative;
- color: gray;
+ color: rgba(255, 255, 255, 0.6);
  top: 60px;
 }
+
 .hero-left-text-2-container {
   position: relative;
   height: 20vh;
@@ -188,6 +198,24 @@ li:hover {
   height: 40vh;
   background-color: gray;
 }
+.cursor {
+  pointer-events: none;
+  z-index: 1000;
+  display: block;
+
+}
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  transition: transform .32s linear;
+}
+.cursor__ball circle {
+  fill: #f7f8fa;
+}
+
 @keyframes wordAnimation {
   0% {
     top: 0%;
